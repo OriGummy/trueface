@@ -1,0 +1,395 @@
+/* Lato font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Secular+One&family=Suez+One&display=swap');
+/* Anton font */
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+:root {
+    --primary: #000000;
+    --text: #fefefe;
+    --accent-red: #ae3434;
+    --accent-green: #3eae34;
+}
+
+html, body {
+    /* overflow: hidden; */
+    /* position: fixed; */
+    font-family: "Anton";
+    width: 100%;
+    background-color: var(--primary);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* blood */
+#page-container::after {
+    content: url("../public/images/blood-2.png");
+    position: absolute;
+    transform: scaley(-1) scale(0.4) translate(30%, 80%);
+    z-index: 3;
+}
+
+#title-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: var(--text);
+    padding: 1rem;
+    gap: 0.25rem;
+    z-index: 4;
+}
+
+#title-container>* {
+    width: fit-content;
+}
+
+#main-title {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    letter-spacing: 0.05rem;
+    z-index: 99;
+}
+
+#main-subtitle {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+#worse-warn {
+    padding-top: 1.5vh;
+    align-self: center;
+}
+
+/* Top text */
+#page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+.title {
+    text-align: center;
+    font-size: 3em;
+    color: black;
+}
+
+#fade-top {
+    position: absolute;
+    background: linear-gradient(to bottom, black 15%, rgba(0, 0, 0, 0) 20%);
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
+#fade-bottom {
+    position: absolute;
+    background: linear-gradient(to top, rgb(0, 0, 0) 5%, rgba(0, 0, 0, 0) 10%);
+    bottom: 9%;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
+#graphic-container {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 60vh; */
+}
+
+
+#graphic {
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    /*box-shadow: 0 0 0.5rem rgba(255,255,255, 0.25);*/
+}
+
+#graphic-detail {
+    padding-top: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    color: var(--text);
+    height: 12vh;
+    width: 100%;
+    white-space: pre-wrap;
+    text-transform: uppercase;
+}
+
+#blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    backdrop-filter: blur(1rem);
+
+}
+
+#warning-containter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    color: var(--text);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#eye {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+/* Buttons */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 0.75rem;
+    padding-block: 1rem;
+    z-index: 99;
+    margin-bottom: 2vh;
+}
+
+#btn-disable-warning {
+    align-self: center;
+    background-color: #302B26;
+    font-family: "Anton";
+    padding: 0.5rem 1.5rem;
+    border-radius: 100vw;
+    border: 0;
+    width: fit-content;
+    color: white;
+}
+
+.btn-container>* {
+    font-family: "Anton";
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    border-radius: 100vw;
+    border: 0;
+    width: fit-content;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+#btn-ive-seen-enough {
+    background-color: #830503;
+    padding: 0.5rem 1rem;
+}
+
+#enough-link {
+    text-decoration: none;
+    color: white;
+}
+
+#btn-show-me-more {
+    background-color: #830503;
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+}
+
+/* nsfw */
+#nsfw-label {
+    width: 8rem;
+    aspect-ratio: 3/1;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 100vw;
+    cursor: pointer;
+    transition: 400ms cubic-bezier(0, 0, 0.1, 1);
+}
+
+#nsfw-label:after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 0.36rem;
+    left: 0.5rem;
+    background: #d89229;
+    border-radius: 5.5rem;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 400ms cubic-bezier(1, 0, 0, 1);
+}
+
+#nsfw-toggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#nsfw-toggle:checked+#nsfw-label:after {
+    left: 7.5rem;
+    transform: translateX(-100%);
+    background: #cd0000;
+}
+
+#nsfw-label:active:after {
+    width: 2rem;
+}
+
+#nsfw-label svg {
+    position: absolute;
+    width: 1.75rem;
+    top: 0.4rem;
+    z-index: 100;
+}
+
+#nsfw-label svg#lock {
+    left: 0.6rem;
+    fill: #d89229;
+    transition: 400ms cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+#nsfw-label svg#warning {
+    right: 0.6rem;
+    fill: #ebebeb;
+    transition: 400ms cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+#nsfw-toggle:checked+#nsfw-label svg#warning {
+    fill: #cd0000;
+}
+
+#nsfw-toggle:checked+#nsfw-label svg#lock {
+    fill: white;
+}
+
+#NSFL-text {
+    margin-top: 0.25rem;
+}
+
+#NSFL-container {
+    text-align: center;
+    color: var(--text);
+    font-size: 1.25rem;
+    z-index: 4;
+}
+
+.enough {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+}
+
+.hashtag {
+    color: #EE0000;
+}
+
+#blood-img {
+    position: absolute;
+    transform: rotate(352deg);
+    top: 35rem;
+    right: -25rem;
+    z-index: 1;
+}
+
+.bullet-points li {
+    position: relative;
+    font-size: 1.4em;
+    letter-spacing: .5;
+    text-shadow: 0.1rem 0.1rem #ABABAB;
+    color: black;
+    margin-left: 12vw;
+    width: 80%;
+    /* padding: 0.5em 0px; */
+}
+
+.bullet {
+    margin: 0;
+    padding-bottom: 1vh
+}
+
+.enough p {
+    font-weight: bold;
+    text-shadow: 0.05rem 0.05rem #ABABAB;
+    font-size: 3em;
+}
+
+#house-icon {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+.fundraisers>.subtitle {
+    font-weight: bold;
+    text-shadow: 0.05rem 0.05rem #ABABAB;
+    font-size: 1.4em;
+    color: black;
+}
+
+.share-button {
+    position: relative;
+    left: 10rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#enough-title {
+    font-family: "Anton";
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: 0.15rem;
+    line-height: 3.8rem;
+    margin-left: 2rem;
+    position:relative;
+    z-index: 99;
+}
+
+#enough-title>span {
+    font-size: 0.75em;
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* mgome page blood */
+    #page-container::after {
+        opacity: 0%;
+    }
+
+    .bullet-points {
+        position: absolute;
+    }
+
+    html {
+        font-size: 20px;
+    }
+
+    #blood-img {
+        top: 30rem;
+        right: -10rem;
+    }
+
+    #enough-title {
+        visibility: hidden;
+    }
+}
+
+a:link {
+    color: grey;
+  }

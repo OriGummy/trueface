@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.78f5224c.css",
+    "main.js": "/static/js/main.8eeeb53e.js",
+    "static/js/787.c60a509d.chunk.js": "/static/js/787.c60a509d.chunk.js",
+    "static/media/blood-1.png": "/static/media/blood-1.464218dd4c8376ba0d41.png",
+    "static/media/blood-2.png": "/static/media/blood-2.3bc0c622ff4bf8be4881.png",
+    "index.html": "/index.html",
+    "static/media/house.svg": "/static/media/house.60f8c7fb5431a2fd0db53feb35c2a0e1.svg",
+    "main.78f5224c.css.map": "/static/css/main.78f5224c.css.map",
+    "main.8eeeb53e.js.map": "/static/js/main.8eeeb53e.js.map",
+    "787.c60a509d.chunk.js.map": "/static/js/787.c60a509d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78f5224c.css",
+    "static/js/main.8eeeb53e.js"
+  ]
+}

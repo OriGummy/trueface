@@ -1,0 +1,316 @@
+/* Lato font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Secular+One&family=Suez+One&display=swap');
+/* Anton font */
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+:root {
+    --primary: #000000;
+    --text: #fefefe;
+    --accent-red: #ae3434;
+    --accent-green: #3eae34;
+}
+
+html, body {
+    /* overflow: hidden; */
+    /* position: fixed; */
+    font-family: "Anton";
+    width: 100vw;
+    background-color: var(--primary);
+    font-size: 2.2vh;
+    letter-spacing: 0.06vmin;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#page-container::after {
+    /* position: absolute;
+    transform: scaley(-1) scale(0.4) translate(30%, 80%); */
+    z-index: 3;
+}
+
+#title-container {
+    background-image: url("../public/images/blood-1.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 80%;
+    height: 35vh;
+    width: 100vw;
+    padding-top: 2.5vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+
+    text-align: left;
+    color: var(--text);
+    z-index: 4;
+}
+
+#title-container>* {
+    width: 100vw;
+}
+
+#main-title {
+    text-transform: uppercase;
+    font-size: 17.5vmin;
+    line-height: 17.5vmin;
+    letter-spacing: 0.3vmin;
+    z-index: 99;
+}
+
+#main-subtitle {
+    text-transform: uppercase;
+    padding-top: 2vmin;
+}
+
+#worse-warn {
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    height: 6vh;
+    align-self: center;
+    text-align: center;
+    color: white;
+    z-index: 100;
+}
+
+#page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#warning-containter {
+    width: 100%;
+    border-style: double;
+    border-radius: 10vh;
+    border: #3eae34;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    position: absolute;
+    top: 50%;
+    color: #F3C201;
+    text-align: center;
+    z-index: 100;
+}
+
+.warn-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.health-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 25%;
+}
+
+#graphic-container {
+    transition: 1s linear;
+    animation: 1s linear;
+    width: 100%;
+    height: 72vh;
+}
+
+#graphic {
+    transition: 1s linear;
+    width: 100%;
+    height: 55vh;
+}
+
+#graphic-detail {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    color: var(--text);
+    bottom: 0;
+    width: 100%;
+    white-space: pre-wrap;
+    text-transform: uppercase;
+}
+
+#btn-disable-warning {
+    align-self: center;
+    background-color: #302B26;
+    font-family: "Anton";
+    padding: 1vh 5vw;
+    border-radius: 100vw;
+    border: 0;
+    color: white;
+    width: fit-content;
+}
+
+.btn-container {
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    height: 17vh;
+}
+
+.btn-container>* {
+    font-family: "Anton";
+    font-size: 3vh;
+    align-self: center;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 100vw;
+    border: 0;
+    width: fit-content;
+    text-align: center;
+    color: white;
+    background-color: #830503;
+}
+
+#btn-more {
+    padding: 1vh 14vw
+}
+
+#btn-stop {
+    padding: 1vh 9vw;
+    margin-left: 4vw;
+}
+
+.enough {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+.hashtag {
+    color: #EE0000;
+}
+
+.link {
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+.share-buttons {
+    width: 100%;
+    text-align: center;
+}
+
+.bullet-points {
+    letter-spacing: .5;
+    text-shadow: 0.4vmin 0.4vmin #ABABAB;
+    color: black;
+    margin-left: 12vw;
+    width: 80%;
+    height: 70vh;
+}
+
+.bullet { 
+    padding-top: 2vh;  
+    padding-bottom: 2vh;
+ }
+
+#enough-title {
+    width: 100vw;
+    text-align: center;
+    height: 10vh;
+    font-weight: bold;
+    font-size: 7vh;
+}
+
+#house-icon {
+    position: absolute;
+    bottom: 1vmin;
+    right: 1vmin;
+    color: rgb(255, 255, 255);
+}
+
+.fundraisers>.subtitle {
+    font-weight: bold;
+    text-shadow: 0.05rem 0.05rem #ABABAB;
+    font-size: 1.4em;
+    color: black;
+}
+
+#fundraisers-container {
+    padding: 3vmin;
+    z-index: 100;
+    height: 100vh
+}
+
+#enough-footer {
+    position: absolute;
+    bottom: 10vh;
+    width: 100vw;
+    height: 20vh;
+    background-image: url("../public/images/blood-2.png");
+    background-repeat: no-repeat;
+    font-family: "Anton";
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14vmin;
+    letter-spacing: 0.5vw;
+    line-height: 8vh;
+    padding-left: 3vmin;
+    padding-top: 5vh;
+}
+
+#enough-footer>span {
+    letter-spacing: 0.6vw;
+    font-size: 17vmin;
+}
+
+a:link {
+    color: grey;
+}
+
+#could-not-stop {
+    height: 100vh;
+    width: 100vw;
+    line-height: 5vh;
+    color: white;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    position: relative;
+}
+
+.downwards-v {
+    position: absolute;
+    bottom: 15vh;
+    height: 5vh;
+    width: 25vw;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
